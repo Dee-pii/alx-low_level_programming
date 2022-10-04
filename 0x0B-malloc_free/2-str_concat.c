@@ -30,12 +30,12 @@ char *str_concat(char *s1, char *s2)
 	c = b = 0;
 	while (s1[c] != '\0')
 	{
-		strDup[c] = s1[a];
+		strDup[c] = s1[c];
 		c++;
 	}
 	while (s2[b] != '\0')
 	{
-		strDup[a] = s2[b];
+		strDup[c] = s2[b];
 		c++, b++;
 	}
 	strDup[c] = '\0';
