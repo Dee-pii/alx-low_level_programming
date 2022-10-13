@@ -2,26 +2,25 @@
 
 /**
  * print_numbers - prints numbers.
- * Description: a function that prints numbers
- * @separator: string to be printed.
- * @n: number of integers.
+ * @separator: string to be printed between numbers.
+ * @n: number of integers passed to the function.
  *
- * Return: 0
+ * Return: no return.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list varilist;
-	unsigned int d;
+	va_list valist;
+	unsigned int i;
 
-	va_start(varilist, d);
+	va_start(valist, n);
 
-	for (d = 0; d < n; d++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(varilist, int));
-		if (separator && d < n - 1)
+		printf("%d", va_arg(valist, int));
+		if (separator && i < n - 1)
 			printf("%s", separator);
 	}
 
 	printf("\n");
-	va_end(varilist);
+	va_end(valist);
 }
