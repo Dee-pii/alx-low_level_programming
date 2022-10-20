@@ -3,6 +3,7 @@
 /**
  * print_list - print all the elements of a struct list
  * @h: the struct
+ *
  * Return: the number of nodes
  */
 
